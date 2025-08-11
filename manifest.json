@@ -1,0 +1,109 @@
+{
+  "id": "js-endpoint-secret-hunter",
+  "name": "JS Endpoint & Secret Hunter",
+  "version": "1.0.0",
+  "description": "🔍 JavaScript endpoint and secret detection plugin for Caido. Passively monitors HTTP responses to extract and analyze JavaScript files for API endpoints, sensitive keys, tokens, email addresses, and IP addresses with intelligent filtering and modern UI.",
+  "author": {
+    "name": "ibrahimsql",
+    "email": "ibrahimsql@proton.me",
+    "url": "https://github.com/ibrahmsql"
+  },
+  "homepage": "https://github.com/ibrahmsql/js-endpoint-secret-hunter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibrahmsql/js-endpoint-secret-hunter.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "caido",
+    "plugin",
+    "security",
+    "javascript",
+    "endpoint",
+    "secret",
+    "token",
+    "api",
+    "pentesting",
+    "bug-bounty",
+    "reconnaissance",
+    "osint"
+  ],
+  "caido": {
+    "min_version": "0.20.0",
+    "max_version": "*"
+  },
+  "permissions": [
+    "proxy:read",
+    "scope:read",
+    "http:request",
+    "ui:tab",
+    "commands:register",
+    "storage:read",
+    "storage:write"
+  ],
+  "backend": {
+    "entrypoint": "dist/backend/index.js"
+  },
+  "frontend": {
+    "entrypoint": "dist/frontend/index.js",
+    "style": "dist/frontend/style.css"
+  },
+  "build": {
+    "exclude": [
+      "src/**/*",
+      "node_modules/**/*",
+      "*.md",
+      "*.log",
+      "*.tmp",
+      ".git/**/*",
+      ".vscode/**/*",
+      ".idea/**/*",
+      "coverage/**/*",
+      "test/**/*",
+      "tests/**/*",
+      "*.test.*",
+      "*.spec.*"
+    ],
+    "include": [
+      "dist/**/*",
+      "manifest.json",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "categories": [
+    "reconnaissance",
+    "analysis",
+    "security"
+  ],
+  "tags": [
+    "javascript",
+    "endpoint-discovery",
+    "secret-detection",
+    "passive-scanning",
+    "api-discovery"
+  ],
+  "screenshots": [
+    "screenshots/main-interface.png",
+    "screenshots/results-table.png",
+    "screenshots/export-modal.png"
+  ],
+  "documentation": {
+    "readme": "README.md",
+    "installation": "INSTALLATION.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "support": {
+    "issues": "https://github.com/ibrahmsql/js-endpoint-secret-hunter/issues",
+    "discussions": "https://github.com/ibrahmsql/js-endpoint-secret-hunter/discussions",
+    "wiki": "https://github.com/ibrahmsql/js-endpoint-secret-hunter/wiki"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ibrahmsql"
+  }
+}

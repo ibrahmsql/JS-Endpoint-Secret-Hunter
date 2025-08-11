@@ -1,0 +1,79 @@
+{
+  "name": "js-endpoint-secret-hunter",
+  "version": "2.0.0",
+  "description": "🔍 Caido plugin for scanning JavaScript responses - finds endpoints, secrets, emails, and IP addresses with modern UI",
+  "main": "backend/script.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/**/*.{js,ts}",
+    "test": "echo \"No tests specified\" && exit 0",
+    "package": "npm run clean && npm run build && tar -czf js-endpoint-secret-hunter-$(date +%Y%m%d-%H%M%S).tar.gz manifest.json frontend/ backend/ README.md"
+  },
+  "keywords": [
+    "caido",
+    "plugin",
+    "security",
+    "javascript",
+    "endpoint",
+    "secret",
+    "scanner",
+    "penetration-testing",
+    "web-security",
+    "reconnaissance",
+    "osint",
+    "bug-bounty",
+    "vulnerability-scanner",
+    "frontend",
+    "backend",
+    "full-stack"
+  ],
+  "author": {
+    "name": "Security Research Team",
+    "email": "security@research.com",
+    "url": "https://github.com/security-research"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/security-research/js-endpoint-secret-hunter"
+  },
+  "bugs": {
+    "url": "https://github.com/security-research/js-endpoint-secret-hunter/issues"
+  },
+  "homepage": "https://github.com/security-research/js-endpoint-secret-hunter#readme",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "caido": {
+    "minVersion": "0.20.0",
+    "maxVersion": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.0",
+    "prettier": "^3.1.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.3.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+     "react": "^18.2.0",
+     "react-dom": "^18.2.0"
+   },
+  "peerDependencies": {
+     "@caido/sdk-frontend": "*",
+     "@caido/sdk-backend": "*"
+   }
+}
